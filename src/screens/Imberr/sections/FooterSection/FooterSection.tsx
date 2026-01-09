@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import herobg from "../../../../assets/Section3.jpeg"
 
 export const FooterSection = (): JSX.Element => {
   const stats = [
@@ -47,7 +48,7 @@ export const FooterSection = (): JSX.Element => {
       <div
         className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay"
         style={{
-          backgroundImage: "url('/Section3.jpeg')",
+          backgroundImage: `url(${herobg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}

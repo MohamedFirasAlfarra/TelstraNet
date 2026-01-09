@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "../../../../components/ui/button";
 import { Menu, X } from "lucide-react";
-
+import logo from "../../../../assets/logo.png"
 const navigationItems = [
   { label: "Home", isActive: true },
   { label: "About us", isActive: false },
@@ -21,7 +21,7 @@ export const TestimonialsSection = (): JSX.Element => {
           {/* Left Section: Imberr Logo + Separator */}
           <div className="flex items-center gap-6">
             <img
-              src="/logo.png"
+              src={logo}
               alt="IMBERR Technology"
               className="h-24 w-auto object-contain cursor-pointer"
             />

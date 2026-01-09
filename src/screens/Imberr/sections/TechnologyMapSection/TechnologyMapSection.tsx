@@ -1,11 +1,11 @@
 import { Button } from "../../../../components/ui/button";
-
+import herobg from "../../../../assets/herobg.png"
 export const TechnologyMapSection = (): JSX.Element => {
   return (
     <section className="relative w-full h-[650px] md:h-[750px] lg:h-[700px] overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 hover:scale-105"
-        style={{ backgroundImage: "url('/hero_bg.png')" }} />
+        style={{ backgroundImage: `url(${herobg})` }} />
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative h-full max-w-[1200px] mx-auto px-6 md:px-12 lg:px-32 xl:px-48 flex items-center">
         <div className="flex flex-col lg:items-start md:items-center text-center lg:text-left gap-8

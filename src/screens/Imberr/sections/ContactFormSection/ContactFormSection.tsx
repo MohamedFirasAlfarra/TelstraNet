@@ -1,6 +1,7 @@
 import { Button } from "../../../../components/ui/button";
 import { Input } from "../../../../components/ui/input";
 import { SendHorizontal } from "lucide-react";
+import logo from "../../../../assets/logo.png"
 
 export const ContactFormSection = (): JSX.Element => {
   const companyLinks = [
@@ -26,7 +27,7 @@ export const ContactFormSection = (): JSX.Element => {
 
           <div className="flex flex-col items-center lg:items-start gap-8">
             <div className="flex items-center gap-3">
-              <img className="w-[180px] object-contain rounded-xl" alt="TELSTRANET Logo" src="/logo.png"/>
+              <img className="w-[180px] object-contain rounded-xl" alt="TELSTRANET Logo" src={logo}/>
             </div>
 
             <p className="[font-family:'Inter',Helvetica] font-light text-white/90 text-sm md:text-base
