@@ -1,18 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "../../../../components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Globe } from "lucide-react";
 import logo from "../../../../assets/logo.png"
-const navigationItems = [
-  { label: "Home", isActive: true },
-  { label: "About us", isActive: false },
-  { label: "Services", isActive: false },
-  { label: "Career", isActive: false },
-  { label: "Security and Privacy", isActive: false },
-  { label: "Contact us", isActive: false },
-];
+import { useTranslation } from "react-i18next";
 
 export const TestimonialsSection = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(newLang);
+  };
+
+  useEffect(() => {
+    document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
+    document.documentElement.lang = i18n.language;
+  }, [i18n.language]);
+
+  const navigationItems = [
+    { label: t('navbar.home'), isActive: true },
+    { label: t('navbar.about_us'), isActive: false },
+    { label: t('navbar.services'), isActive: false },
+    { label: t('navbar.career'), isActive: false },
+    { label: t('navbar.security_privacy'), isActive: false },
+    { label: t('navbar.contact_us'), isActive: false },
+  ];
 
   return (
     <nav className="w-full bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
@@ -44,32 +57,31 @@ export const TestimonialsSection = (): JSX.Element => {
             ))}
           </div>
 
-          {/* Right Section: Vision 2030 Logo (Desktop) */}
-          {/* <div className="hidden md:block">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Saudi_Vision_2030_logo.svg/512px-Saudi_Vision_2030_logo.svg.png"
-              alt="Saudi Vision 2030"
-              className="h-16 w-auto object-contain"
-            />
-          </div> */}
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center gap-4">
-            {/* <div className="md:hidden">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Saudi_Vision_2030_logo.svg/512px-Saudi_Vision_2030_logo.svg.png"
-                alt="Saudi Vision 2030"
-                className="h-12 w-auto object-contain"
-              />
-            </div> */}
+          {/* Right Section: Language Switcher and Mobile Menu */}
+          <div className="flex items-center gap-4">
+            {/* Language Switcher (Desktop & Mobile) */}
             <Button
               variant="ghost"
               size="icon"
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-600 hover:text-[#2848c9] hover:bg-transparent m-2 text-xl"
+              onClick={toggleLanguage}
+              className="text-gray-600 hover:text-[#2848c9] hover:bg-transparent transition-colors duration-200"
+              title={i18n.language === 'en' ? 'Switch to Arabic' : 'Switch to English'}
             >
-              {isOpen ? <X size={32} /> : <Menu size={32} />}
+              <Globe className="h-6 w-6" />
+              <span className="sr-only">Toggle Language</span>
             </Button>
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden flex items-center">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsOpen(!isOpen)}
+                className="text-gray-600 hover:text-[#2848c9] hover:bg-transparent m-2 text-xl"
+              >
+                {isOpen ? <X size={32} /> : <Menu size={32} />}
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -88,8 +100,8 @@ export const TestimonialsSection = (): JSX.Element => {
                   <Button
                     variant="ghost"
                     className={`w-full justify-start h-auto py-5 px-6 rounded-2xl hover:bg-gray-50/50 transition-all duration-300 group ${item.isActive
-                        ? "bg-blue-50/40"
-                        : "hover:translate-x-1"
+                      ? "bg-blue-50/40"
+                      : "hover:translate-x-1"
                       }`}
                     onClick={() => setIsOpen(false)}
                   >

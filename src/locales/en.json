@@ -1,0 +1,104 @@
+{
+    "navbar": {
+        "home": "Home",
+        "about_us": "About us",
+        "services": "Services",
+        "career": "Career",
+        "security_privacy": "Security and Privacy",
+        "contact_us": "Contact us"
+    },
+    "hero": {
+        "subtitle": "WHO WE ARE",
+        "title": "We solve business problems with technology",
+        "description": "Maecenas donec quisque proin libero rutrum habitasse ultricies nunc ultrices. Ad inceptos interdum mi enim ullamcorper maecenas accumsan fames tristique scelerisque. Scelerisque turpis hendrerit nunc vestibulum lacinia sapien et. Hendrerit sollicitudin mus id consectetuer at ex scelerisque himenaeos interdum dui."
+    },
+    "footer": {
+        "glance": "INOVAZIA AT GLANCE",
+        "title": "Let us do the work, so you can focus on what matters.",
+        "description": "Phasellus ad mus auctor ullamcorper lectus dictum sodales turpis rhoncus morbi ex. Dignissim purus phasellus suspendisse donec platea elementum sagittis eget pharetra magna aliquet. Elit cursus inceptos venenatis donec hac sollicitudin egestas himenaeos.",
+        "stats": {
+            "project_done": "Project Done",
+            "happy_customer": "Happy Customer",
+            "review_customer": "Review Customer",
+            "years_experience": "Years Experience"
+        }
+    },
+    "business_problem": {
+        "subtitle": "NEED HELP ?",
+        "title": "Don't hesitate to contact us for more information",
+        "description": "Hendrerit mattis taciti gravida pellentesque fusce ullamcorper diam massa commodo",
+        "form": {
+            "name": "Name",
+            "phone": "Phone",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message"
+        }
+    },
+    "services_overview": {
+        "subtitle": "OVERVIEW",
+        "title": "Where technology meets business.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+    },
+    "contact_form": {
+        "description": "We create IT solutions that are easy to use, easy to manage, and easy to trust.",
+        "company": {
+            "title": "Company",
+            "about_us": "About us",
+            "leadership": "Leadership",
+            "careers": "Careers",
+            "article_news": "Article & News",
+            "legal_notice": "Legal Notice"
+        },
+        "support": {
+            "title": "Support",
+            "help_center": "Help Center",
+            "customer_service": "Customer Service",
+            "faq": "FAQ",
+            "contact_us": "Contact us"
+        },
+        "newsletter": {
+            "title": "Newsletter",
+            "description": "Sign up our newsletter to get update news and article about company.",
+            "placeholder": "Enter your email",
+            "button": "Sign Up"
+        },
+        "copyright": "Copyright © 2026 TELSTRANET, All rights reserved."
+    },
+    "metrics": {
+        "subtitle": "WHAT WE OFFER",
+        "title": "Where technology meets business.",
+        "services": {
+            "ai": {
+                "title": "Artificial Intelligence",
+                "desc": "AI and Robotics at TELSTRANET: Redefining Possibilities"
+            },
+            "cloud": {
+                "title": "Cloud Services",
+                "desc": "Cloud Computing and Hybrid Cloud Solutions at TELSTRANET: Unleashing the Power of the Cloud"
+            },
+            "smart_home": {
+                "title": "Smart Home & Building Automation",
+                "desc": "Cognitive City, Smart Building, and Building Automation Solutions by TELSTRANET: Shaping Smarter Environments"
+            },
+            "cyber_security": {
+                "title": "Cyber Security",
+                "desc": "Cyber Security Solutions at TELSTRANET: Protecting Your Digital Assets"
+            },
+            "data_center": {
+                "title": "Data Center & Application",
+                "desc": "Data Center & Application Solutions by TELSTRANET: Powering Your Digital Infrastructure"
+            },
+            "digital_transformation": {
+                "title": "Digital Transformation",
+                "desc": "Digital Transformation at TELSTRANET: Enabling Seamless Digital Evolution"
+            }
+        },
+        "learn_more": "Learn more"
+    },
+    "technology_map": {
+        "title": "The future of technology starts here",
+        "description": "Our performance is your success. Our passion is innovation. Our expertise is unmatched. We get you more",
+        "button": "Discover more"
+    }
+}

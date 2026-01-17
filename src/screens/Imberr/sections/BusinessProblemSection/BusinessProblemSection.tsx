@@ -3,9 +3,10 @@ import { Card, CardContent } from "../../../../components/ui/card";
 import { Input } from "../../../../components/ui/input";
 import { Label } from "../../../../components/ui/label";
 import { Textarea } from "../../../../components/ui/textarea";
+import { useTranslation } from "react-i18next";
 
 export const BusinessProblemSection = (): JSX.Element => {
-
+  const { t } = useTranslation();
 
   return (
     <section className="relative w-full flex flex-col gap-[33px] bg-white overflow-hidden py-10 lg:py-20">
@@ -13,16 +14,15 @@ export const BusinessProblemSection = (): JSX.Element => {
         <div className="flex flex-col w-full lg:w-[550px] items-start gap-7">
           <h3 className="[font-family:'Inter',Helvetica] font-medium text-[#122979]
            text-sm tracking-[0] leading-[normal]">
-            NEED HELP ?
+            {t('business_problem.subtitle')}
           </h3>
 
           <h2 className="text-3xl md:text-4xl relative self-stretch [font-family:'Inter',Helvetica] font-semibold text-[#535252] tracking-[0] leading-[normal]">
-            Don&#39;t hesitate to contact us for more information
+            {t('business_problem.title')}
           </h2>
 
           <p className="relative self-stretch [font-family:'Inter',Helvetica] font-light text-[#333333] text-lg md:text-[12px] tracking-[0] leading-[normal]">
-            Hendrerit mattis taciti gravida pellentesque fusce ullamcorper diam
-            massa commodo
+            {t('business_problem.description')}
           </p>
         </div>
 
@@ -41,11 +41,11 @@ export const BusinessProblemSection = (): JSX.Element => {
                         htmlFor="name"
                         className="[font-family:'Inter',Helvetica] font-light text-black text-md tracking-[0] leading-[normal]"
                       >
-                        Name
+                        {t('business_problem.form.name')}
                       </Label>
                       <Input
                         id="name"
-                        placeholder="Name"
+                        placeholder={t('business_problem.form.name')}
                         className="w-full h-[45px] bg-[#d2d7db66] rounded-[6px] border-0 [font-family:'Inter',Helvetica] font-light text-[#888888] text-xl px-[25px] placeholder:text-sm"
                       />
                     </div>
@@ -55,11 +55,11 @@ export const BusinessProblemSection = (): JSX.Element => {
                         htmlFor="phone"
                         className="[font-family:'Inter',Helvetica] font-light text-black text-md tracking-[0] leading-[normal]"
                       >
-                        Phone
+                        {t('business_problem.form.phone')}
                       </Label>
                       <Input
                         id="phone"
-                        placeholder="Phone"
+                        placeholder={t('business_problem.form.phone')}
                         className="w-full h-[45px] bg-[#d2d7db66] rounded-[6px] border-0 [font-family:'Inter',Helvetica] font-light text-[#888888] text-xl px-[25px] placeholder:text-sm"
                       />
                     </div>
@@ -70,11 +70,11 @@ export const BusinessProblemSection = (): JSX.Element => {
                       htmlFor="email"
                       className="[font-family:'Inter',Helvetica] font-light text-black text-md tracking-[0] leading-[normal]"
                     >
-                      Email
+                      {t('business_problem.form.email')}
                     </Label>
                     <Input
                       id="email"
-                      placeholder="Email"
+                      placeholder={t('business_problem.form.email')}
                       className="w-full h-[45px] bg-[#d2d7db66] rounded-[6px] border-0 [font-family:'Inter',Helvetica] font-light text-[#888888] text-xl px-[25px] placeholder:text-sm"
                     />
                   </div>
@@ -84,7 +84,7 @@ export const BusinessProblemSection = (): JSX.Element => {
                       htmlFor="message"
                       className="[font-family:'Inter',Helvetica] font-light text-black text-md tracking-[0] leading-[normal]"
                     >
-                      Messae
+                      {t('business_problem.form.message')}
                     </Label>
                     <Textarea
                       id="message"
@@ -97,7 +97,7 @@ export const BusinessProblemSection = (): JSX.Element => {
                     className="w-full h-auto bg-[#2168ff] hover:bg-[#122979] rounded-[30px]
                      py-[10px] [font-family:'Inter',Helvetica]
                      font-light text-[#fff] text-[15px] tracking-[0] leading-[normal]" >
-                    Send Message
+                    {t('business_problem.form.submit')}
                   </Button>
                 </form>
               </CardContent>

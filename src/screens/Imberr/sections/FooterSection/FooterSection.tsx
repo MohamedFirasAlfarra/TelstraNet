@@ -1,23 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import herobg from "../../../../assets/Section3.jpeg"
+import herobg from "../../../../assets/Section3.jpg"
+import { useTranslation } from "react-i18next";
 
 export const FooterSection = (): JSX.Element => {
+  const { t } = useTranslation();
   const stats = [
     {
       value: "14 K+",
-      label: "Project Done",
+      label: t('footer.stats.project_done'),
     },
     {
       value: "12 K+",
-      label: "Happy customer",
+      label: t('footer.stats.happy_customer'),
     },
     {
       value: "4.7",
-      label: "Review customer",
+      label: t('footer.stats.review_customer'),
     },
     {
       value: "15 +",
-      label: "Years Experience",
+      label: t('footer.stats.years_experience'),
     },
   ];
 
@@ -64,12 +66,12 @@ export const FooterSection = (): JSX.Element => {
           <div className="w-full lg:w-[45%] flex flex-col gap-6">
             <h3 className="[font-family:'Inter',Helvetica] font-medium text-white/80 text-sm 
             md:text-md tracking-widest uppercase">
-              INOVAZIA AT GLANCE
+              {t('footer.glance')}
             </h3>
 
             <h2 className="[font-family:'Inter',Helvetica] font-extrabold text-white text-2xl
              md:text-5xl lg:text-5xl leading-[1.15]">
-              Let us do the work, so you can focus on what matters.
+              {t('footer.title')}
             </h2>
           </div>
 
@@ -77,18 +79,12 @@ export const FooterSection = (): JSX.Element => {
           <div className="w-full lg:w-[45%] flex flex-col gap-8">
             <p className="[font-family:'Inter',Helvetica] font-light text-white/90 text-lg 
             md:text-[16px] leading-relaxed">
-              Phasellus ad mus auctor ullamcorper lectus dictum sodales turpis
-              rhoncus morbi ex. Dignissim purus phasellus suspendisse donec
-              platea elementum sagittis eget pharetra magna aliquet. Elit cursus
-              inceptos venenatis donec hac sollicitudin egestas himenaeos.
+              {t('footer.description')}
             </p>
 
             <p className="[font-family:'Inter',Helvetica] font-light text-white/90 text-lg 
             md:text-[16px] leading-relaxed">
-              Phasellus ad mus auctor ullamcorper lectus dictum sodales turpis
-              rhoncus morbi ex. Dignissim purus phasellus suspendisse donec
-              platea elementum sagittis eget pharetra magna aliquet. Elit cursus
-              inceptos venenatis donec hac sollicitudin egestas himenaeos.
+              {t('footer.description')}
             </p>
           </div>
         </div>
@@ -106,11 +102,11 @@ export const FooterSection = (): JSX.Element => {
                 }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="[font-family:'Inter',Helvetica] font-bold text-white text-3xl md:text-4xl lg:text-4xl tracking-tight leading-none">
+              <div className="[font-family:'Inter',Helvetica] font-bold text-[#F9B111] text-3xl md:text-4xl lg:text-4xl tracking-tight leading-none">
                 {stat.value}
               </div>
 
-              <div className="[font-family:'Inter',Helvetica] font-medium text-white/70 text-sm md:text-base lg:text-lg tracking-wide uppercase text-center">
+              <div className="[font-family:'Inter',Helvetica] font-medium text-[#F9B111] text-sm md:text-base lg:text-lg tracking-wide uppercase text-center">
                 {stat.label}
               </div>
             </div>
