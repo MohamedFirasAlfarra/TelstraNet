@@ -46,7 +46,6 @@ export const FooterSection = (): JSX.Element => {
 
   return (
     <section className="relative w-full lg:py-16 overflow-hidden bg-[#2860f0] justify-center items-center">
-      {/* Background Image Overlay */}
       <div
         className="absolute inset-0 opacity-20 pointer-events-none mix-blend-overlay"
         style={{
@@ -56,13 +55,10 @@ export const FooterSection = (): JSX.Element => {
         }}
       />
 
-      {/* Blue Gradient Overlay */}
       <div className="absolute inset-0 from-[#1a4cd8] via-[#2860f0] to-[#3b82f6] opacity-90 " />
 
       <div className="container relative mx-auto px-6 lg:px-12 py-10">
-        {/* Top Content Row */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-12 lg:gap-20 mb-24 md:mb-32">
-          {/* Left Column */}
           <div className="w-full lg:w-[45%] flex flex-col gap-6">
             <h3 className="[font-family:'Inter',Helvetica] font-medium text-white/80 text-sm 
             md:text-md tracking-widest uppercase">
@@ -75,7 +71,6 @@ export const FooterSection = (): JSX.Element => {
             </h2>
           </div>
 
-          {/* Right Column */}
           <div className="w-full lg:w-[45%] flex flex-col gap-8">
             <p className="[font-family:'Inter',Helvetica] font-light text-white/90 text-lg 
             md:text-[16px] leading-relaxed">
@@ -89,7 +84,6 @@ export const FooterSection = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Stats Row with Animation */}
         <div
           ref={statsRef}
           className="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-20 items-center 

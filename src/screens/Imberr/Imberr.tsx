@@ -9,14 +9,24 @@ import { TestimonialsSection } from "./sections/TestimonialsSection";
 
 export const Imberr = (): JSX.Element => {
   return (
-    <div className="bg-white overflow-hidden w-full relative">
+    <div className="bg-white overflow-hidden w-full relative pt-28">
       <TestimonialsSection />
-      <TechnologyMapSection />
-      <HeroSection />
+      <div id="home">
+        <TechnologyMapSection />
+      </div>
+      <div id="about">
+        <HeroSection />
+      </div>
       <FooterSection />
-      <MetricsHighlightSection />
-      <ServicesOverviewSection />
-      <BusinessProblemSection />
+      <div id="services">
+        <MetricsHighlightSection />
+      </div>
+      <div id="overview">
+        <ServicesOverviewSection />
+      </div>
+      <div id="contact">
+        <BusinessProblemSection />
+      </div>
       <ContactFormSection />
     </div>
   );
